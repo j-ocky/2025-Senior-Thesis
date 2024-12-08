@@ -7,7 +7,7 @@
 % performance of each particle in each iteration are displayed in the 
 % command window until the final iteration has been reached. Once this 
 % happens, the most optimal Kp and Ki are outputted. These gains can be 
-% used in the motor model to view the step response.
+% used in the motor model (motor_sim_test.m) to view the step response.
 % 
 % 
 
