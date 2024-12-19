@@ -3,8 +3,9 @@
 % This program uses particle swarm optimization (PSO) to tune Kp and Ki 
 % terms of a previously simulated motor control system. PSO parameters edit 
 % various characteristics, such as runtime, thoroughness, solution space 
-% size, and more (see thesis report for more background). Control 
-% performance of each particle in each iteration are displayed in the 
+% size, and more (see thesis report for more background). 
+%  
+% Control performance of each particle in every iteration are displayed in the 
 % command window until the final iteration has been reached. Once this 
 % happens, the most optimal Kp and Ki are outputted. These gains can be 
 % used in the motor model (motor_sim_test.m) to view the step response.
