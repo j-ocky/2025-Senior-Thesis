@@ -1,6 +1,6 @@
 % addVelocities.m
 %
-% THIS IS STEP 2 OF CLEANUP PROCESS: append velocity data to cleaned files
+% THIS IS STEP 2 OF POSITION DATA CLEANUP PROCESS: append velocity data to cleaned files
 %
 % This program uses displacements from videoCleanup.m to append a
 % velocities column to the data files.
