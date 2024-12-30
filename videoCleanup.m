@@ -1,6 +1,6 @@
 % videoCleanup.m
 %
-% THIS IS STEP 1 OF CLEANUP PROCESS: filter original data and clean up csv 
+% THIS IS STEP 1 OF POSITION DATA CLEANUP PROCESS: filter original data and clean up csv 
 % 
 % Because the video tracking analysis rate was faster than the video frame  
 % rate, some position readings were clumped together while the video frame 
