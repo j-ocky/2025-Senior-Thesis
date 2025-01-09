@@ -11,7 +11,7 @@
 //
 //  The main() function creates a simple movement sequence by calling some of the above functions, and this can be easily changed in main().
 //
-//  See the beginning of each function for a quick description of its use.
+//  A short description is given at the top of each function to explain its general purpose.
 //
 //
 //  Below are the key global variables subject to change for quick testing (initialized in beginning):
@@ -72,13 +72,13 @@ volatile bool indexInterrupt = false; // boolean flag to indicate 0 deg index in
 // Direction flag (1 for clockwise, -1 for counterclockwise)
 volatile int direction = 1; 
 
-double setpoint = 4;  // Initial setpoint speed, max 5 Hz
+double setpoint = 4;  // Initial setpoint speed, max 5 Hz 
 double setpointRatio = 1.3; // Ratio between primary and alternate speed setpoint for asymmetric flapping
 double altSetpoint = setpoint / setpointRatio; // alternate setpoint when turning, scaled down from original setpoint for asymmetric flapping
 double prevSetpoint = setpoint;
-double Kp = 60;  // **SUBJECT TO CHANGE**
-double Ki = 110;  // **SUBJECT TO CHANGE**
-double Kd = 0.0;  // **SUBJECT TO CHANGE**
+double Kp = 60;  // **SUBJECT TO TUNING**
+double Ki = 110;  // **SUBJECT TO TUNING**
+double Kd = 0.0;  // **SUBJECT TO TUNING**
 double feedForward = 0.0; // feed-forward control signal
 double kff = 1; // relative strength of feed-forward term (0 to 1) // **SUBJECT TO CHANGE**
 double derivative = 0.0;
@@ -100,17 +100,17 @@ double speedWindow[speedWindowSize] = {0, 0, 0, 0, 0};  // Array to store last 3
 int speedWindowIndex = 0; 
 
 // **Position-controller-specific variables**
-double posSetpoint = 60; // **SUBJECT TO CHANGE**
-double posKp = 0.3; // **SUBJECT TO CHANGE**
-double posKi = 0.05; // **SUBJECT TO CHANGE**
-double posKd = 0.08; // **SUBJECT TO CHANGE**
+double posSetpoint = 60; 
+double posKp = 0.3; // **SUBJECT TO TUNING**
+double posKi = 0.05; // **SUBJECT TO TUNING**
+double posKd = 0.08; // **SUBJECT TO TUNING**
 double posIntegralError = 0;
 double posIntegralWindupLimit = 50;
 double posError = 0.0;
 
 unsigned long startTime;
 double interval = 5;    
-unsigned long speedCalcInterval = 5;  // Speed calculation every 25 ms   
+unsigned long speedCalcInterval = 5;  // Speed calculation every 5 ms   
 
 // This function uses one of the encoder's channels as an interrupt pin to constantly update the motor's position
 void IRAM_ATTR updateEncoder() {
