@@ -11,7 +11,8 @@
 //
 //  The main() function creates a simple movement sequence by calling some of the above functions, and this can be easily changed in main().
 //
-//  A short description is given at the top of each function to explain its general purpose.
+//  A short description is given at the top of each function to explain its general purpose. Collapse all functions to get a better, 
+//  less clustered view of each.
 //
 //
 //  Below are the key global variables subject to change for quick testing (initialized in beginning):
@@ -52,21 +53,12 @@ Servo myservo;
 
 volatile long encoderCount = 0;  // Variable to store encoder pulse count
 
-volatile long encoderAbsPosition = 0;
-unsigned long lastTime = 0;      // Time tracking for Hz calculation
-unsigned long lastPulseTime = 0; // Time tracking for Hz calculation
 unsigned long lastSpeedCalcTime = 0; // Time tracking for speed calculation
 unsigned long lastPosTime = 0; // Time tracking for position control loop
-unsigned long pulseInterval = 0;
 double controlLoopDuration = 0.0;
-
 unsigned long lastControlTime = 0;
 
 const int pulsesPerRevolution = 4096;  // Number of encoder pulses per revolution
-volatile bool lastAState = LOW;  // Store the last state of A
-
- // store potentiometer absolute location
-
 volatile bool indexInterrupt = false; // boolean flag to indicate 0 deg index interrupt triggered
 
 // Direction flag (1 for clockwise, -1 for counterclockwise)
@@ -122,7 +114,8 @@ void resetPosition() {
   indexInterrupt = true; // Reset position when index channel is triggered
 }
 
-
+// This function contains miscellaneous commands that help with the program's execution, such as the serial update rate, 
+// arduino connection to wifi, input/output pin designation, and interrupt pin declaration.
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
@@ -171,10 +164,9 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(ENCODER_A), updateEncoder, CHANGE);
   attachInterrupt(digitalPinToInterrupt(ENCODER_Z), resetPosition, RISING);
 
-    // Titles for outputs
+  // Titles for outputs
   Serial.println("Time Speed Setpoint PWM Integral AdjustedKff Position Ref kpAdjustment");
 
-  lastPulseTime = millis();   // Initialize pulse time tracking
   lastSpeedCalcTime = millis(); // Initialize speed calculation time
   lastControlTime = millis(); // Initialize control loop time
   startTime = millis(); // Record start time
@@ -188,9 +180,8 @@ void setup() {
 //
 // After 8 seconds pass, the program will execute a final glide turn using the position controller. 
 //
-// Unlike the other controllers, the setPosition() function doesn't use the loop() function to for its control loop. Instead, it uses its own 
-// its own while loop. When this while loop is broken, the stop() function is used to completely halt movement. 
-
+// Unlike the other controllers, the setPosition() function doesn't use this loop() function as its control loop. Instead, it uses its own 
+// its own while loop contained within setPosition(). Once this while loop is broken, the stop() function is used to completely halt movement. 
 void loop() {
 
   ArduinoOTA.handle();
@@ -682,5 +673,4 @@ void setMotorVoltage(int pwmValue) {
 void stop() {
   while(1) { /* stop the program */ }
 }
-
 
