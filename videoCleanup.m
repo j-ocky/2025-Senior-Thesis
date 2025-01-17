@@ -1,6 +1,9 @@
 % videoCleanup.m
 %
 % THIS IS STEP 1 OF POSITION DATA CLEANUP PROCESS: filter original data and clean up csv 
+%
+% This program creates an array "ids" to identify what files to pull from the filepath, and then 
+% appends "_clippedDLC...050_filtered.csv", which is present in every raw filename.
 % 
 % Because the video tracking analysis rate was faster than the video frame  
 % rate, some position readings were clumped together while the video frame 
