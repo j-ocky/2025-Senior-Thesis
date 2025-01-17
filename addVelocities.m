@@ -7,7 +7,7 @@
 %
 % **Note that the clump cleanups from videoCleanup.m were not 100% perfect,
 % so some weird but sparse velocity spikes appear when graphing. I used the
-% graphs to identify the timestamp and manually delete that row.**
+% graphs to identify the timestamps and manually delete those rows.**
 %
 %
 %
