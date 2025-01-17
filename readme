@@ -1,6 +1,23 @@
 README FILE FOR GITHUB REPO PROGRAMS
 
-**Read this for a quick summary of the programs before reading any of them**
+** Read this for a quick summary of what the programs are. 
+Each individual program has a detailed introduction discussing the purpose & output(s) **
 
 
+  Motor Modeling/Optimization            
+  ----------------------------------------
+  motorPSOcontrol.m  
+  motor_sim_test.m
 
+
+  Video Data Extraction/Cleaning            
+  ----------------------------------------
+  (Step 1) videoCleanup.m
+  (Step 2) addVelocities.m
+  (Step 3) swimmingPerpendicularError.m
+  (Step 4) combinedStraightErrorPlotting.m
+
+
+  Motor Controllers (combined)            
+  ----------------------------------------
+  motor_test_controller.ino
