@@ -4,17 +4,24 @@
 % terms of a simulated motor control system. PSO parameters edit 
 % various characteristics, such as runtime, thoroughness, solution space 
 % size, and more (see thesis report for more background). 
+%
 %  
 % Control performance of each particle in every iteration are displayed in the 
 % command window until the final iteration has been reached. Once this 
 % happens, the most optimal Kp and Ki are outputted. These gains can be 
 % used in the motor model (motor_sim_test.m) to view the step response.
+%
+% ** THIS PROGRAM ONLY OPTIMIZES CONTROLLER GAINS FOR ONE SPEED SETPOINT AT A TIME (setpoint = 4 Hz in this case). **
+%         The optimized gains for a 4 Hz setpoint are assumed to be generally adequate across the 
+%         relevant speeds for our fish (1 - 6 Hz). Responses can be tested in motor_sim_test.m
+%         
 % 
 % The diary() function is used to output all of the command window 
 % contents to a .txt file from which the Kp and Ki positions at each 
 % iteration can be scraped and graphed. In my thesis' example, I used ChatGPT  
 % to quickly scrape through the text and obtain .csv files for graphing.
-%
+% 
+% 
 
 
 clear;
