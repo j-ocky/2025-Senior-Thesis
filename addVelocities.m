@@ -5,6 +5,9 @@
 % This program uses displacements from videoCleanup.m to append a
 % velocities column to the data files.
 %
+% The resulting .csv files from this program are to be used in 
+% swimmingPerpendicularError.m 
+%
 % **Note that the clump cleanups from videoCleanup.m were not 100% perfect,
 % so some weird but sparse velocity spikes appear when graphing. I used the
 % graphs to identify the timestamps and manually delete those rows.**
