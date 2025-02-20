@@ -19,8 +19,8 @@ R = 2.7; % armature resistance (Ohm)
 L = 0.00308; % armature inductance (H)
 
 % Controller Gains
-Kp = 47.49; % Proportional gain
-Ki = 1481.89; % Integral gain
+Kp = 47.49; % Proportional gain    **INPUT OPTIMIZED GAINS HERE**
+Ki = 1481.89; % Integral gain    **INPUT OPTIMIZED GAINS HERE**
 Kd = 0; % Derivative gain
 Kff = 0; % Feed-forward gain
 
