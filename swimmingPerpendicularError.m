@@ -2,8 +2,8 @@
 %
 % *FOR STRAIGHT SWIM TESTS*
 %
-% Processing 3 trials at a time from the addVelocities.m outputs (i.e. ends
-% in "_cleaned_with_speed.csv", this program has 3 main goals:
+% Processing 3 trials at a time (i.e. 1 test) from the addVelocities.m outputs (i.e. ends
+% in "_cleaned_with_speed.csv"), this program has 3 main goals:
 %
 % 1) Calculates the perpendicular errors at every point from the best fit 
 %   line of the data
@@ -20,8 +20,8 @@ clc;
 
 % Step 1: File information
 % Specify the common filename ending and the prefixes for the files
-file_prefixes = {'1_1', '1_2', '1_3'}; % Replace with actual prefixes
-file_suffix = '_cleaned_with_speed.csv'; % Replace with actual suffixes * FROM OUTPUT OF addVelocities.m * 
+file_prefixes = {'1_1', '1_2', '1_3'}; % Replace with actual prefixes **FROM OUTPUTS OF addVelocities.m**
+file_suffix = '_cleaned_with_speed.csv'; % Replace with actual suffixes **FROM OUTPUTS OF addVelocities.m** 
 
 % Initialize a table to store results from all files
 all_results = table();
