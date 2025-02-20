@@ -16,8 +16,8 @@
 %         relevant speeds for our fish (1 - 6 Hz). Responses can be tested in motor_sim_test.m
 %         
 % 
-% The diary() function is used to output all of the command window 
-% contents to a .txt file from which the Kp and Ki positions at each 
+% The diary() function is used to output all of the particle positions from the 
+% command window to a .txt file from which the Kp and Ki positions at each 
 % iteration can be scraped and graphed. In my thesis' example, I used ChatGPT  
 % to quickly scrape through the text and obtain .csv files for graphing.
 % 
