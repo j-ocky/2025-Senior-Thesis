@@ -12,7 +12,7 @@
 //  The main() function creates a simple movement sequence by calling some of the above functions, and this can be easily changed in main().
 //
 //  A short description is given at the top of each function to explain its general purpose. Collapse all functions to get a better, 
-//  less clustered view of each.
+//  less clustered view of all at once.
 //
 //
 //  Below are the key global variables subject to change for quick testing (initialized in beginning):
